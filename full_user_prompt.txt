@@ -1,0 +1,1266 @@
+<USER_REQUEST>
+MASTER UX/UI REDESIGN — AI STUDY COMPANION
+
+Project:
+C:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion
+
+IMPORTANT:
+This is a major UX/UI upgrade for ONLY these three features:
+
+1. Mastery & Growth
+2. Recommendations
+3. Learning Analytics
+
+The previous redesign was NOT sufficient.
+It mostly rearranged the same fields and still looked like a normal generic dashboard.
+
+I do NOT want another minor card/CSS redesign.
+
+I want these three features to feel like three professionally designed parts of a real AI-powered learning platform.
+
+==================================================
+DO NOT BREAK EXISTING FUNCTIONALITY
+==================================================
+
+Preserve:
+- authentication
+- authorization
+- database
+- Prisma schema
+- user isolation
+- project isolation
+- material isolation
+- RAG architecture
+- vector search
+- PDF processing
+- AI Tutor
+- quiz generation
+- assessment generation
+- existing APIs
+- existing working backend services
+
+Do not redesign unrelated pages.
+
+Do not change package versions unnecessarily.
+
+Do not use destructive commands.
+
+NEVER:
+- prisma migrate reset
+- prisma db push --force-reset
+- delete user data
+- delete database
+- delete uploads
+- npm audit fix --force
+
+Reuse the existing architecture and data.
+
+==================================================
+CORE PRODUCT PRINCIPLE
+==================================================
+
+The three pages must have THREE DIFFERENT PURPOSES.
+
+MASTERy & GROWTH
+=
+"How well do I understand my concepts and how is my mastery changing?"
+
+RECOMMENDATIONS
+=
+"What should I do next to improve?"
+
+LEARNING ANALYTICS
+=
+"What has happened in my learning activity?"
+
+They must NOT look like copies of each other.
+
+Do not simply display database records in different cards.
+
+Design the information architecture first.
+
+==================================================
+GLOBAL VISUAL QUALITY
+==================================================
+
+Make the UI feel like a high-quality modern AI education platform.
+
+Use:
+- professional typography
+- excellent spacing
+- strong hierarchy
+- subtle borders
+- subtle shadows
+- rounded corners
+- clean progress indicators
+- meaningful icons
+- compact badges
+- professional buttons
+- responsive layouts
+- tasteful hover effects
+- tasteful transitions
+- progress animations
+- expandable details
+- useful interactive controls
+
+Use the EXISTING application visual identity and palette.
+
+Do NOT recolor the entire application.
+
+Use color selectively for:
+- progress
+- status
+- selected controls
+- primary actions
+- secondary actions
+- important states
+
+Do NOT make the UI rainbow-colored.
+
+Do NOT use excessive gradients.
+
+Do NOT use giant decorative illustrations.
+
+Do NOT use emojis as UI icons.
+
+Do NOT add random statistics just to fill space.
+
+==================================================
+CRITICAL ICON BUG
+==================================================
+
+The application currently displays literal text such as:
+
+svg
+svgRefresh
+svgConcept Performance
+svgGrowth
+svgStrong
+svgExample
+
+This is a REAL rendering bug.
+
+FIX THE ROOT CAUSE.
+
+Inspect:
+- React components
+- icon imports
+- icon rendering
+- serialized React elements
+- SVG handling
+- icon mapping
+- malformed JSX
+- component props
+- string conversion
+
+Do NOT hide the text with CSS.
+
+Do NOT use CSS like:
+display:none
+
+Do NOT replace it with another string.
+
+Icons must be actual rendered icons.
+
+Use lucide-react correctly.
+
+Examples:
+
+Target
+Brain
+CheckCircle2
+TrendingUp
+AlertCircle
+Lightbulb
+BookOpen
+ClipboardCheck
+BarChart3
+RefreshCw
+FileText
+MessageCircle
+ChevronRight
+ArrowUpRight
+Clock
+Activity
+
+Do not place icons next to every sentence.
+
+Icons should communicate meaning.
+
+After implementation, verify that the literal word "svg" does not appear visually anywhere in these pages.
+
+==================================================
+CRITICAL TEXT FORMATTING BUG
+==================================================
+
+Current:
+
+ExampleStrong
+
+Mastery87%
+
+Accuracy1 / 1
+
+TrajectorySTABLE
+
+This must be fixed.
+
+Correct:
+
+Example                         [Strong]
+
+Mastery
+87%
+
+Accuracy
+1 / 1
+
+Trajectory
+Stable
+
+Concept name and status must always be separate UI elements.
+
+Do not concatenate labels and values.
+
+Use proper spacing, typography, badges, grid/flex layout.
+
+==================================================
+MASTERy & GROWTH
+==================================================
+
+PURPOSE:
+
+A visual learning-progress dashboard.
+
+It should help the student understand:
+- current mastery
+- concept-level mastery
+- accuracy
+- growth
+- weak areas
+- strong areas
+- what action is appropriate
+
+------------------------------------------
+HEADER
+------------------------------------------
+
+Mastery & Growth
+
+Track how your understanding changes across concepts in this study project.
+
+Current material:
+
+[FileText] Unit-IV_Computational Learning Theory.pdf
+
+Add:
+
+[Refresh] Refresh
+
+Make Refresh a real interactive button.
+
+Use a subtle button color and hover animation.
+
+------------------------------------------
+OVERALL MASTERY HERO
+------------------------------------------
+
+Create a visually strong but clean mastery visualization.
+
+Example:
+
+                    87%
+
+              Overall Mastery
+
+        █████████████████░░░
+
+          1 concept practiced
+
+The progress bar MUST visually represent 87%.
+
+The filled portion must be approximately 87%.
+
+Do not show an empty bar next to 87%.
+
+Animate the bar smoothly from 0% to the real value when displayed.
+
+Animation should happen once, not continuously.
+
+Use existing accent color.
+
+------------------------------------------
+MASTERY SNAPSHOT
+------------------------------------------
+
+Create a compact visual summary:
+
+[CheckCircle2]
+Strong
+1 concept
+
+[TrendingUp]
+Developing
+0 concepts
+
+[AlertCircle]
+Needs Practice
+0 concepts
+
+Use separate:
+- icon
+- title
+- value
+
+Do not concatenate:
+
+Strong≥75%
+
+Instead:
+
+Strong
+≥75%
+
+Make thresholds visually secondary.
+
+------------------------------------------
+CONCEPT PERFORMANCE
+------------------------------------------
+
+This must be a polished learning-progress component.
+
+Do NOT create a giant card for every concept.
+
+Use compact expandable rows.
+
+Example:
+
+CONCEPT PERFORMANCE
+
+┌────────────────────────────────────────────────────────────┐
+│ ✓  Example                                    [Strong]     │
+│                                                            │
+│    Mastery                                                 │
+│    █████████████████░░░ 87%                                │
+│                                                            │
+│    Accuracy  1 / 1              Stable        View →       │
+└────────────────────────────────────────────────────────────┘
+
+Requirements:
+
+- concept name
+- separate status badge
+- progress bar
+- percentage
+- accuracy
+- trajectory
+- View Details action
+
+Add subtle hover elevation.
+
+Add a small ChevronRight icon.
+
+Clicking the row opens details.
+
+------------------------------------------
+FILTERS
+------------------------------------------
+
+Create professional segmented controls:
+
+[All] [Strong] [Developing] [Needs Practice]
+
+Selected filter:
+- existing accent
+- subtle background
+- border
+- smooth transition
+
+Do not recolor the page.
+
+------------------------------------------
+SORT
+------------------------------------------
+
+Professional compact dropdown:
+
+Sort by:
+Mastery: High → Low
+Mastery: Low → High
+Recently Practiced
+Concept Name
+
+------------------------------------------
+CONCEPT DETAIL
+------------------------------------------
+
+Do NOT make the detail view look like plain database output.
+
+Create a structured learning insight panel.
+
+Example:
+
+[Brain]
+
+Example
+[Strong]
+
+87%
+Current Mastery
+
+1 / 1
+Accuracy
+
+Stable
+Trajectory
+
+--------------------------------
+
+RECOMMENDED ACTION
+
+You have demonstrated solid mastery.
+Maintain your progress with occasional review.
+
+--------------------------------
+
+RECENT ATTEMPT
+
+[CheckCircle2]
+
+Which of the following best defines the role and mechanism of Example?
+
+MCQ · Sep 18, 2026
+
+Correct
+
+--------------------------------
+
+ACTIONS
+
+[MessageCircle] Ask AI Tutor
+
+[ClipboardCheck] Practice Quiz
+
+Use appropriate existing-palette button colors.
+
+Add subtle hover/press animations.
+
+Do not duplicate the same data elsewhere unnecessarily.
+
+------------------------------------------
+GROWTH
+------------------------------------------
+
+Create a visual trajectory section.
+
+Growth
+
+Understanding your recent concept trajectory.
+
+Use:
+
+[TrendingUp] Improving
+
+[Minus] Stable
+
+[AlertCircle] Needs Practice
+
+Use compact rows.
+
+If no historical trend exists:
+
+"No historical trend available yet."
+
+Do NOT claim a concept is improving just because it has a high mastery.
+
+Historical improvement requires actual historical attempts.
+
+==================================================
+RECOMMENDATIONS
+==================================================
+
+PURPOSE:
+
+This is an ACTION CENTER.
+
+It should feel fundamentally different from Mastery.
+
+The user should immediately understand:
+
+"What should I do next?"
+
+------------------------------------------
+HEADER
+------------------------------------------
+
+Recommendations
+
+Personalized next steps based on your mastery, recent performance, and practice history.
+
+Current material:
+[FileText] Unit-IV_Computational Learning Theory.pdf
+
+------------------------------------------
+NEXT BEST ACTION
+------------------------------------------
+
+Create one visually distinctive main recommendation.
+
+Use:
+
+[Lightbulb]
+
+NEXT BEST ACTION
+
+Dynamic recommendation based on actual learning data.
+
+Example:
+
+Review a weak concept
+
+Your recent performance indicates that targeted review would be useful.
+
+[Review Concept →]
+
+This must NOT be hardcoded.
+
+Generate it from actual data.
+
+------------------------------------------
+RECOMMENDATION ITEMS
+------------------------------------------
+
+Create actionable recommendation rows/cards.
+
+Structure:
+
+[priority icon]
+
+REVIEW CONCEPT
+
+Manhattan Distance
+
+Mastery
+10%
+
+Accuracy
+0 / 6 correct
+
+WHY THIS IS RECOMMENDED
+
+You answered 0 of 6 recent questions correctly.
+
+ACTION
+
+[Review Concept →]
+
+Only ONE primary action per recommendation.
+
+Use different recommendation types only when relevant:
+
+Review Concept
+Practice Questions
+Revisit Fundamentals
+Maintain Progress
+Continue Learning
+
+Do not show every type for every user.
+
+------------------------------------------
+PRIORITY
+------------------------------------------
+
+Use subtle badges:
+
+HIGH PRIORITY
+MEDIUM
+SUGGESTED
+
+Avoid aggressive warning colors.
+
+------------------------------------------
+STUDY ROADMAP
+------------------------------------------
+
+Do NOT show just:
+
+1. Review
+2. Practice
+3. Retry
+
+Create a professional visual sequence:
+
+01
+Review Concept
+Understand the weak area
+
+↓
+
+02
+Practice
+5 targeted questions
+
+↓
+
+03
+Reassess
+Retry a mixed quiz
+
+Use numbered circles/steps.
+
+Keep it compact.
+
+Maximum 3–5 steps.
+
+------------------------------------------
+YOUR STRENGTHS
+------------------------------------------
+
+Compact section:
+
+YOUR STRENGTHS
+
+✓ Euclidean Distance        95%
+✓ k-Nearest Neighbor        95%
+✓ Eager Learning            89%
+
+Use mini progress bars.
+
+Do not make giant cards.
+
+------------------------------------------
+RECENT PERFORMANCE
+------------------------------------------
+
+Only claim "Improving" if real historical data exists.
+
+If historical data exists:
+
+↑ Improving
+→ Stable
+↓ Needs Attention
+
+If it does not:
+
+RECENT PERFORMANCE
+
+Not enough historical attempts to determine a trajectory yet.
+
+Never fabricate trends.
+
+==================================================
+LEARNING ANALYTICS
+==================================================
+
+PURPOSE:
+
+This is an INSIGHT + ACTIVITY dashboard.
+
+It must NOT look like Mastery & Growth.
+
+It answers:
+
+"What has happened in my learning?"
+
+------------------------------------------
+HEADER
+------------------------------------------
+
+Learning Analytics
+
+Understand your learning activity, accuracy, and progress.
+
+Current material:
+
+[FileText] Unit-IV_Computational Learning Theory.pdf
+
+------------------------------------------
+KEY METRICS
+------------------------------------------
+
+Use a clean metric strip/grid:
+
+[Target]
+87%
+Overall Mastery
+
+[ClipboardCheck]
+100%
+Quiz Accuracy
+
+[BookOpen]
+1
+Practiced
+
+[Layers]
+15
+Mapped Topics
+
+Only show meaningful metrics.
+
+Do not add random metrics.
+
+------------------------------------------
+LEARNING COVERAGE
+------------------------------------------
+
+Create a visual coverage component.
+
+Learning Coverage
+
+Practiced
+1
+
+Unpracticed
+14
+
+████░░░░░░░░░░░░░░░
+
+1 / 15 topics practiced
+
+Make this visually communicate coverage.
+
+Do not show 14 repeated rows saying:
+
+Not Practiced Yet
+
+------------------------------------------
+PERFORMANCE INSIGHTS
+------------------------------------------
+
+Show practiced concepts only.
+
+PERFORMANCE INSIGHTS
+
+Example
+
+Mastery
+█████████████████░░ 87%
+
+Accuracy
+1 / 1
+
+Trend
+Stable
+
+If there are multiple practiced concepts, display them cleanly.
+
+------------------------------------------
+UNPRACTICED TOPICS
+------------------------------------------
+
+Instead of 14 repetitive rows:
+
+UNPRACTICED TOPICS
+
+14 topics have not been practiced yet.
+
+[View Topics →]
+
+Clicking opens a clean expandable list/drawer.
+
+This keeps the dashboard uncluttered.
+
+------------------------------------------
+QUIZ PERFORMANCE
+------------------------------------------
+
+Create a clean performance visualization:
+
+QUIZ PERFORMANCE
+
+Questions
+1
+
+Correct
+1
+
+Accuracy
+100%
+
+Difficulty Performance:
+
+Easy
+████████████████ 100%
+
+Medium
+—
+
+Hard
+—
+
+Do not invent values.
+
+------------------------------------------
+ASSESSMENT PERFORMANCE
+------------------------------------------
+
+If no assessments:
+
+ASSESSMENT PERFORMANCE
+
+No open-ended assessments completed yet.
+
+[Start Assessment →]
+
+Keep empty state compact.
+
+------------------------------------------
+RECENT ACTIVITY
+------------------------------------------
+
+Replace plain bullet lists with a vertical learning timeline.
+
+Example:
+
+RECENT ACTIVITY
+
+● AI Tutor Session
+  Sep 18 · Study review
+
+│
+
+● Quiz Completed
+  Sep 18 · 1 question
+
+│
+
+● Mastery Updated
+  Sep 18 · Example → 87%
+
+Use:
+Activity icon
+date
+activity
+short context
+
+Do not show meaningless duplicate events.
+
+------------------------------------------
+STUDY MATERIAL
+------------------------------------------
+
+Compact document summary:
+
+[FileText]
+
+Unit-IV_Computational Learning Theory.pdf
+
+6 pages
+15 mapped topics
+1 practiced
+
+[Ready]
+
+Do not repeat the document name throughout the page unnecessarily.
+
+==================================================
+DATA INTEGRITY — VERY IMPORTANT
+==================================================
+
+There is currently a serious data consistency problem.
+
+Current document:
+
+Unit-IV_Computational Learning Theory.pdf
+
+But Analytics has shown concepts from another document/project such as:
+
+Instance-Based Learning
+Nearest Neighbor Learning
+Lazy vs Eager Learning
+Disadvantages of Instance-Based Learning
+
+These MUST NOT appear if they belong to another material/project.
+
+Do NOT fix this only with frontend filtering.
+
+Trace the actual backend queries and data relationships.
+
+Every relevant query must correctly respect:
+
+userId
+projectId
+materialId
+
+where applicable.
+
+Current material/project context must consistently control:
+
+- concept list
+- mastery
+- quiz attempts
+- assessment results
+- recommendations
+- analytics
+- recent activity
+
+No cross-project leakage.
+
+No cross-material leakage.
+
+No cross-user leakage.
+
+==================================================
+CONCEPT QUALITY
+==================================================
+
+Do not expose meaningless PDF extraction fragments as concepts.
+
+Examples:
+
+"algorithms that learn from examples."
+"most ϵ."
+"− ϵ"
+"Using the inequality"
+"Two parameters define PAC learning:"
+
+These should not be displayed as normal concepts unless the existing concept extraction system genuinely determines that they are valid educational concepts.
+
+Use the existing validation/normalization logic.
+
+Do not hardcode concept names.
+
+Do not fabricate concepts.
+
+Preserve valid terminology from the document.
+
+==================================================
+PROGRESS VISUALIZATION
+==================================================
+
+Progress bars must actually represent their percentage.
+
+87%:
+
+█████████████████░░░
+
+45%:
+
+█████████░░░░░░░░░░░
+
+100%:
+
+████████████████████
+
+The filled portion must correspond to the real value.
+
+Animate:
+
+0 → actual percentage
+
+Use a smooth 500–800ms transition.
+
+Do not continuously animate.
+
+==================================================
+BUTTON DESIGN
+==================================================
+
+Use the application's existing palette.
+
+Primary actions:
+
+[Practice Quiz →]
+[Review Concept →]
+[Start Practice →]
+
+Secondary:
+
+[Ask AI Tutor]
+[View Details]
+[Retry]
+
+Buttons should include:
+- icon where appropriate
+- proper padding
+- rounded corners
+- hover state
+- pressed state
+- disabled state
+- keyboard focus state
+
+Small color accents are encouraged.
+
+Do NOT redesign global application buttons.
+
+==================================================
+PROFESSIONAL MICRO-INTERACTIONS
+==================================================
+
+Add tasteful animations:
+
+- progress bars animate once
+- concept rows subtly lift/highlight on hover
+- buttons smoothly transition
+- filters smoothly change selected state
+- expandable details open smoothly
+- recommendation items subtly highlight
+- timeline items have subtle appearance transitions
+
+Do NOT use:
+- bouncing
+- flashing
+- excessive movement
+- continuous animations
+- distracting effects
+
+==================================================
+RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+- use space intelligently
+- use two-column layouts where useful
+- maintain visual hierarchy
+
+Mobile:
+- stack sections
+- maintain readable controls
+- avoid broken horizontal tables
+- maintain usable buttons
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+All interactive elements must have:
+- meaningful labels
+- keyboard focus
+- visible focus state
+- appropriate semantic elements
+
+Do not rely on color alone.
+
+Status must include text/icon, not just color.
+
+==================================================
+NO DUPLICATION
+==================================================
+
+Audit the final design.
+
+MASTERy & GROWTH:
+Mastery + concept performance + growth.
+
+RECOMMENDATIONS:
+Next actions + personalized study plan.
+
+ANALYTICS:
+Historical activity + coverage + performance insights.
+
+Do not repeat the same complete concept table on all three pages.
+
+Do not show the same statistic multiple times unless it serves a different purpose.
+
+==================================================
+IMPORTANT CURRENT UI PROBLEMS TO FIX
+==================================================
+
+Fix all of these:
+
+1. Literal "svg" text
+2. Broken icons
+3. ExampleStrong
+4. Mastery87%
+5. Accuracy1/1
+6. TrajectorySTABLE
+7. Poor spacing
+8. Generic cards
+9. Same structure across all pages
+10. No meaningful visual progress
+11. Progress bar not visually matching percentage
+12. Weak visual hierarchy
+13. Recommendations looking like plain lists
+14. Analytics looking like database records
+15. Too many repeated "Not Practiced Yet" entries
+16. Duplicate information
+17. Unclear buttons
+18. Lack of useful interaction
+19. Lack of subtle animation
+20. Incorrect/mixed concepts from another material
+21. Bad concept fragments
+22. Fake/implied trends when history does not exist
+23. Inconsistent mastery/status logic
+24. Poor empty states
+25. UI not feeling like a professional AI learning product
+
+==================================================
+DO NOT JUST MAKE IT PRETTIER
+==================================================
+
+This is critical.
+
+Do not take the existing components and simply add:
+
+- background colors
+- border radius
+- shadows
+- larger fonts
+
+That is NOT enough.
+
+If necessary, restructure the React component hierarchy for these three pages.
+
+Create reusable components where appropriate:
+
+- ProgressBar
+- StatusBadge
+- Metric
+- ConceptRow
+- ConceptDetail
+- RecommendationItem
+- StudyStep
+- TimelineItem
+- EmptyState
+- FilterControl
+
+Do not duplicate logic.
+
+==================================================
+DATA / BACKEND
+==================================================
+
+Reuse the existing:
+
+- mastery service
+- quiz results
+- assessment results
+- concept data
+- recommendation service
+- analytics service
+- project ID
+- material ID
+- RAG/retrieval
+- existing APIs
+
+Fix root causes where data is wrong.
+
+Do not solve backend problems by hardcoding frontend values.
+
+Do not hardcode:
+
+87
+100
+15
+1
+
+These are examples only.
+
+Everything must come from the actual current project/material data.
+
+==================================================
+TESTING
+==================================================
+
+After implementation, test all three pages.
+
+MASTERy & GROWTH:
+- overall mastery
+- progress visualization
+- progress animation
+- status counts
+- filters
+- sorting
+- concept detail
+- recent attempts
+- growth
+- actions
+
+RECOMMENDATIONS:
+- dynamic next action
+- recommendation generation
+- recommendation reason
+- priorities
+- study roadmap
+- strengths
+- recent performance
+- action buttons
+- adaptive changes
+
+ANALYTICS:
+- metrics
+- learning coverage
+- practiced concepts
+- unpracticed topics
+- quiz performance
+- assessment performance
+- recent timeline
+- material information
+
+GLOBAL:
+- zero visible "svg"
+- zero broken icons
+- no concatenated labels
+- no duplicate sections
+- correct progress bars
+- correct animations
+- responsive UI
+- browser console clean
+- TypeScript passes
+- production build passes
+
+==================================================
+FINAL ACCEPTANCE TEST
+==================================================
+
+Open all three pages side-by-side.
+
+They must immediately look different.
+
+Mastery & Growth:
+"Learning Progress"
+
+Recommendations:
+"Action Center"
+
+Learning Analytics:
+"Learning Insights"
+
+If all three still look like:
+Header → Cards → List → Cards
+
+then the redesign is NOT complete.
+
+The final result must feel like:
+
+A professional AI-powered student learning platform.
+
+Not:
+A database management interface.
+
+Not:
+A collection of generic cards.
+
+Not:
+Three copies of the same dashboard.
+
+Every section must have a purpose.
+
+Every icon must communicate meaning.
+
+Every color must have a purpose.
+
+Every animation must improve interaction.
+
+Every number must come from real data.
+
+Every concept must belong to the current project/material.
+
+Do not add unnecessary content merely to make the page bigger.
+
+Implement the redesign completely, test it, and report exactly what was changed and what tests passed.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-19T00:22:38+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\scripts\test-quiz-api.mjs (LANGUAGE_JAVASCRIPT)
+Cursor is on line: 12
+Other open documents:
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\LIMITATIONS.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\SECURITY.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\AI_USAGE.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\ARCHITECTURE.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\src\lib\embeddings.ts (LANGUAGE_TYPESCRIPT)
+</ADDITIONAL_METADATA>

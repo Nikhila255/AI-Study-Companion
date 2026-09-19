@@ -1,0 +1,156 @@
+<USER_REQUEST>
+MASTER UX/UI REDESIGN — AI STUDY COMPANION
+
+Project:
+C:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion
+
+IMPORTANT:
+This is a major UX/UI upgrade for ONLY these three features:
+
+1. Mastery & Growth
+2. Recommendations
+3. Learning Analytics
+
+The previous redesign was NOT sufficient.
+It mostly rearranged the same fields and still looked like a normal generic dashboard.
+
+I do NOT want another minor card/CSS redesign.
+
+I want these three features to feel like three professionally designed parts of a real AI-powered learning platform.
+
+==================================================
+DO NOT BREAK EXISTING FUNCTIONALITY
+==================================================
+
+Preserve:
+- authentication
+- authorization
+- database
+- Prisma schema
+- user isolation
+- project isolation
+- material isolation
+- RAG architecture
+- vector search
+- PDF processing
+- AI Tutor
+- quiz generation
+- assessment generation
+- existing APIs
+- existing working backend services
+
+Do not redesign unrelated pages.
+
+Do not change package versions unnecessarily.
+
+Do not use destructive commands.
+
+NEVER:
+- prisma migrate reset
+- prisma db push --force-reset
+- delete user data
+- delete database
+- delete uploads
+- npm audit fix --force
+
+Reuse the existing architecture and data.
+
+==================================================
+CORE PRODUCT PRINCIPLE
+==================================================
+
+The three pages must have THREE DIFFERENT PURPOSES.
+
+MASTERy & GROWTH
+=
+"How well do I understand my concepts and how is my mastery changing?"
+
+RECOMMENDATIONS
+=
+"What should I do next to improve?"
+
+LEARNING ANALYTICS
+=
+"What has happened in my learning activity?"
+
+They must NOT look like copies of each other.
+
+Do not simply display database records in different cards.
+
+Design the information architecture first.
+
+==================================================
+GLOBAL VISUAL QUALITY
+==================================================
+
+Mak
+<truncated 21486 bytes>
+
+- browser console clean
+- TypeScript passes
+- production build passes
+
+==================================================
+FINAL ACCEPTANCE TEST
+==================================================
+
+Open all three pages side-by-side.
+
+They must immediately look different.
+
+Mastery & Growth:
+"Learning Progress"
+
+Recommendations:
+"Action Center"
+
+Learning Analytics:
+"Learning Insights"
+
+If all three still look like:
+Header → Cards → List → Cards
+
+then the redesign is NOT complete.
+
+The final result must feel like:
+
+A professional AI-powered student learning platform.
+
+Not:
+A database management interface.
+
+Not:
+A collection of generic cards.
+
+Not:
+Three copies of the same dashboard.
+
+Every section must have a purpose.
+
+Every icon must communicate meaning.
+
+Every color must have a purpose.
+
+Every animation must improve interaction.
+
+Every number must come from real data.
+
+Every concept must belong to the current project/material.
+
+Do not add unnecessary content merely to make the page bigger.
+
+Implement the redesign completely, test it, and report exactly what was changed and what tests passed.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-19T00:22:38+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\scripts\test-quiz-api.mjs (LANGUAGE_JAVASCRIPT)
+Cursor is on line: 12
+Other open documents:
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\LIMITATIONS.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\SECURITY.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\AI_USAGE.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\docs\ARCHITECTURE.md (LANGUAGE_MARKDOWN)
+- c:\Users\Nikhila\.gemini\antigravity-ide\scratch\ai-study-companion\src\lib\embeddings.ts (LANGUAGE_TYPESCRIPT)
+</ADDITIONAL_METADATA>
